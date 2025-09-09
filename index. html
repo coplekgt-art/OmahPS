@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmahPS GTPS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2e, #2e2e3e);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 2rem;
+      background: rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, red, green, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.1);
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    a {
+      display: inline-block;
+      margin: 0.5rem 0;
+      padding: 0.7rem 1.5rem;
+      border-radius: 10px;
+      background: #4cafef;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #1f7fd6;
+    }
+
+    code {
+      display: block;
+      background: #111;
+      padding: 0.7rem;
+      border-radius: 10px;
+      text-align: left;
+      white-space: pre-line;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OmahPS GTPS</h1>
+    <p>Selamat datang di server private OmahPS, server GTPS dengan komunitas yang seru dan fitur menarik.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>STATUS SERVER</h2>
+      <p>🟢 ONLINE</p>
+    </div>
+
+    <div class="card">
+      <h2>DOWNLOAD VHOST</h2>
+      <a href="https://www.mediafire.com/file/hvr7f19towmjwmb/host_%25287%2529.txt/file" target="_blank">📥 DOWNLOAD VHOST</a>
+    </div>
+
+    <div class="card">
+      <h2>COPY PTUNNEL</h2>
+      <a href="https://skyhosting.lol/ptunnel.txt" target="_blank">📄 COPY PTUNNEL</a>
+    </div>
+
+    <div class="card">
+      <h2>COPY WINDOWS</h2>
+      <code>
+103.42.116.171 www.growtopia1.com<br>
+103.42.116.171 www.growtopia2.com
+      </code>
+    </div>
+  </main>
+</body>
+</html>
