@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OmahPS — Info (Dark Blue Gold Neon)</title>
+  <meta name="description" content="OmahPS — server info & rules (dark blue + gold neon theme)" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-0: #01030a;
+      --bg-1: #0a0f17;
+      --card: rgba(15,18,24,0.6);
+      --muted: #9aa4b2;
+      --neon-blue: #00bfff;
+      --neon-gold: #ffb84d;
+      --accent: linear-gradient(90deg,var(--neon-blue),var(--neon-gold));
+      color-scheme: dark;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:
+        radial-gradient(1000px 600px at 15% 20%, rgba(0,191,255,0.08), transparent 70%),
+        radial-gradient(800px 500px at 80% 80%, rgba(255,184,77,0.08), transparent 70%),
+        linear-gradient(180deg,#000204 0%, #050a10 60%);
+      color:#e6eef6;
+      padding:32px;
+      display:flex;align-items:center;justify-content:center;
+    }
+
+    .wrap{
+      width:100%;max-width:980px;
+      position:relative;overflow:hidden;
+      border-radius:20px;
+      background:rgba(15,18,24,0.45);
+      backdrop-filter: blur(8px);
+      border:1px solid rgba(255,255,255,0.03);
+      padding:22px;
+    }
+    .wrap::before{
+      content:"";
+      position:absolute;inset:-2px;z-index:0;
+      background:conic-gradient(from 180deg at 50% 50%, rgba(0,191,255,0.25), rgba(255,184,77,0.25), rgba(0,191,255,0.25));
+      filter:blur(30px);
+      opacity:0.9;
+      animation:spin 14s linear infinite;
+      mix-blend-mode:screen;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    header{display:flex;gap:16px;align-items:center;z-index:2;position:relative;margin-bottom:14px;}
+    .logo{
+      width:74px;height:74px;border-radius:14px;
+      display:flex;align-items:center;justify-content:center;
+      font-family:Orbitron,sans-serif;font-weight:700;
+      background:linear-gradient(135deg, rgba(0,191,255,0.14), rgba(255,184,77,0.12));
+      color:#fff;
+      box-shadow:0 6px 24px rgba(0,191,255,0.1),0 0 28px rgba(255,184,77,0.08);
+      border:1px solid rgba(255,255,255,0.05);
+    }
+    h1{font-family:Orbitron,sans-serif;font-size:20px;color:var(--neon-blue);text-shadow:0 0 10px rgba(0,191,255,0.5);}
+    p.lead{color:var(--muted);font-size:13px;margin-top:4px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:10px;position:relative;z-index:2;}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    }
+    .neon-heading{
+      color:var(--neon-gold);
+      font-weight:700;font-size:13px;
+      text-shadow:0 0 8px rgba(255,184,77,0.8);
+      margin-bottom:8px;
+    }
+
+    .links a{
+      display:inline-block;margin:6px 6px 0 0;padding:8px 12px;
+      background:rgba(255,255,255,0.05);
+      border-radius:10px;
+      text-decoration:none;color:var(--neon-blue);
+      border:1px solid rgba(255,255,255,0.05);
+      font-size:13px;
+    }
+    .links a:hover{background:rgba(255,255,255,0.08);transition:0.2s;}
+
+    .staff-list,.rules-list{list-style:none;margin:0;padding:0;}
+    .staff-list li{
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:10px;
+      margin-bottom:6px;
+      padding:10px;
+      display:flex;justify-content:space-between;font-size:14px;
+    }
+    .tag{color:var(--muted);font-size:12px;}
+    .phone{color:var(--neon-gold);text-decoration:none;font-weight:600;}
+
+    .rules-list li{
+      background:rgba(255,255,255,0.02);
+      border-left:3px solid var(--neon-blue);
+      margin-bottom:8px;padding:10px;border-radius:6px;font-size:14px;
+    }
+
+    .scripts-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;}
+    .script-item{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.05);
+      border-radius:8px;
+      padding:8px;
+      font-size:13px;
+    }
+
+    .accent-line{height:2px;background:var(--accent);margin:12px 0;border-radius:4px;}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      background:transparent;border:1px solid rgba(255,255,255,0.06);
+      color:var(--neon-blue);
+      padding:10px 14px;border-radius:12px;cursor:pointer;font-weight:700;
+    }
+    .copy-btn{
+      background:var(--accent);
+      color:#00121a;padding:10px 12px;border-radius:10px;border:none;
+      cursor:pointer;font-weight:700;
+      box-shadow:0 8px 20px rgba(0,191,255,0.15);
+    }
+
+    footer{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;}
+    .muted-small{color:var(--muted);font-size:12px;margin-top:14px;text-align:center;}
+  </style>
+</head>
+<body>
+  <main class="wrap" id="content">
+    <header>
+      <div class="logo">OmahPS</div>
+      <div>
+        <h1>Welcome To <span style="color:#fff">Omah Private Server</span></h1>
+        <p class="lead">Info server • host • staff • aturan (Blue + Gold Neon)</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <div class="neon-heading">Informasi Server</div>
+        <div class="links">
+          <a href="https://gtpshost.com" target="_blank">gtpshost.com</a>
+          <a href="https://gtpshost.com/raw/OmahPS-GH" target="_blank">Powertunnel</a>
+          <a href="https://chat.whatsapp.com/FhI60qlRPUyGAOuCTPOyFq" target="_blank">WhatsApp Group</a>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="neon-heading">Role / Asset Purchase</div>
+          <ul class="staff-list">
+            <li><span>Masden</span><span class="tag"><a class="phone" href="tel:+6282234118998">0822-3411-8998</a></span></li>
+          </ul>
+        </div>
+
+        <div style="margin-top:8px">
+          <div class="neon-heading">Server Staff</div>
+          <ul class="staff-list">
+            <li><span>Coplex</span><span class="tag">@Masden</span></li>
+            <li><span>Vory</span><span class="tag">@Vory</span></li>
+            <li><span>Bella</span><span class="tag">@Bella</span></li>
+          </ul>
+        </div>
+
+        <div class="accent-line"></div>
+
+        <div class="neon-heading">Server Rules</div>
+        <ul class="rules-list">
+          <li>Third-party app diperbolehkan asal tidak melanggar dan tetap adil.</li>
+          <li>Dilarang melakukan penipuan dalam bentuk apa pun.</li>
+          <li>Dilarang menyinggung SARA (suku, ras, agama).</li>
+          <li>Dilarang trolling atau mengganggu pemain lain.</li>
+          <li>Dilarang promosi jual lock di in-game.</li>
+          <li>Dilarang menjual akun atau asset dengan uang asli.</li>
+          <li>Dilarang menyalahgunakan role untuk keuntungan pribadi.</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <div class="neon-heading">Third Party App Rules</div>
+        <ul class="rules-list">
+          <li>Dilarang script teleport untuk mencuri barang.</li>
+          <li>Dilarang script put/break dalam bentuk apa pun.</li>
+          <li>Dilarang menggunakan autofarm bawaan third-party.</li>
+          <li>Dilarang script dupe atau sejenisnya.</li>
+        </ul>
+
+        <p style="margin-top:8px;color:var(--neon-gold);font-weight:600;">Diperbolehkan:</p>
+        <div class="scripts-grid">
+          <div class="script-item">Script plant in plat</div>
+          <div class="script-item">Script harvest</div>
+          <div class="script-item">Script take item in magplant</div>
+          <div class="script-item">Script selfish / proxy / clear world</div>
+        </div>
+
+        <footer>
+          <button class="copy-btn" id="copyAll">Salin Semua</button>
+          <a class="btn" href="https://chat.whatsapp.com/FhI60qlRPUyGAOuCTPOyFq" target="_blank">Gabung WhatsApp</a>
+        </footer>
+      </aside>
+    </div>
+
+    <p class="muted-small">Halaman resmi OmahPS • Tetap jujur & fairplay ⚡</p>
+  </main>
+
+  <script>
+    document.getElementById('copyAll').addEventListener('click', async ()=>{
+      const text = document.getElementById('content').innerText;
+      await navigator.clipboard.writeText(text);
+      const btn=document.getElementById('copyAll');
+      btn.textContent='Tersalin ✓';
+      setTimeout(()=>btn.textContent='Salin Semua',1500);
+    });
+  </script>
+</body>
+</html>
